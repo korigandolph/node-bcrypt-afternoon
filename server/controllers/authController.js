@@ -28,6 +28,6 @@ module.exports = {
             return res.status (403).send('Incorrect password');
         }
         req.session.user = {isAdmin: user.is_admin, id: user.id, username: user.username};
-        return res.send(req.session.user);
+        return res.send(req.session.userer);
     }
 }
